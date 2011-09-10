@@ -56,7 +56,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                  
-            		ErgebnisLabel.setText( " Der BMI beträgt "  + s3 +"kg/m²." );
+            	ErgebnisLabel.setText( " Der BMI beträgt "  + s3 +"kg/m²." );
                  
             	}
      }
