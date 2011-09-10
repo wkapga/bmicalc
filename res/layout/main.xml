@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent" android:orientation="vertical">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:orientation="horizontal">
+
+     <TextView
+       android:text="Grösse in cm: "
+       android:textSize="11pt"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"/>
+
+               <EditText
+               android:layout_height="wrap_content"
+               android:inputType="number"
+               android:id="@+id/et_height"
+               android:layout_width="110dp" android:gravity="right" android:layout_gravity="right"/>
+
 </LinearLayout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:orientation="horizontal">
+
+     <TextView
+       android:text="Gewicht in kg: "
+       android:textSize="11pt"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"/>
+		<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right" >
+
+               <EditText
+               android:layout_height="wrap_content"
+               android:inputType="number"
+               android:id="@+id/et_weight"
+               android:layout_width="110dp" android:gravity="right" />
+		</LinearLayout>
+		
+</LinearLayout>
+
+
+
+   <Button 
+  	android:id="@+id/calc_bmi" 
+  	android:layout_height="wrap_content" 
+  	android:text="Berechnen" 
+  	android:layout_width="160dp"></Button>
+   
+   <TextView
+       android:text="BMI wird hier angezeigt"
+       android:textSize="11pt"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/et_result"
+       android:layout_weight="1"/>
+
+
+</LinearLayout>
+
