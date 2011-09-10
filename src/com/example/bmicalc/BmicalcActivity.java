@@ -11,7 +11,7 @@ public class BmicalcActivity extends Activity {
         
          int  d = 1;
          
-         d = d * 2;
+         d = d * 3;
         
         setContentView(R.layout.main);
         
