@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bmicalc</string>
+    <string name="weight">Gewicht in kg:</string>
+    <string name="height">Grösse in cm:</string>
+	<string name="age">Alter in Jahren:</string>
+	<string name="result0">BMI wird hier angezeigt.</string>
+	<string name="result1">Der BMI beträgt</string>
+	<string name="result2">kg/m².</string>
+	
+</resources>
