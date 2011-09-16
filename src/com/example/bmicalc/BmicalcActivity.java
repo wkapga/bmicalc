@@ -5,6 +5,8 @@ package com.example.bmicalc;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+// import JSci.maths.statistics;
+
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -59,6 +61,8 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  // l,s,m
                  // Double sds = ((bmi/m)^l-1) / ( l *s)
                  // perzentil = kum.stdnormvert(sds)
+                 
+               //  double perc = cumulativeProbability(double -2,02);
                  
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
