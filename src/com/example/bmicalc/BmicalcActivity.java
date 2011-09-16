@@ -1,5 +1,8 @@
 package com.example.bmicalc;
 
+
+// http://www.a-g-a.de/Leitlinies2.pdf
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
@@ -53,6 +56,10 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  
                  Double bmi = w / ( h * h );
 
+                 // l,s,m
+                 // Double sds = ((bmi/m)^l-1) / ( l *s)
+                 // perzentil = kum.stdnormvert(sds)
+                 
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                  
