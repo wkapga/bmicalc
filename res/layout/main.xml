@@ -6,7 +6,7 @@
 <TableRow>
 
      <TextView
-       android:text="Grösse in cm: "
+       android:text="@string/height"
        android:textSize="11pt"
        android:layout_width="fill_parent"
        android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
 
 <TableRow>
      <TextView
-       android:text="Gewicht in kg: "
+       android:text="@string/weight"
        android:textSize="11pt"
        android:layout_width="fill_parent"
        android:layout_height="wrap_content"
@@ -40,7 +40,23 @@
 		
 </TableRow>
 
+<TableRow>
+     <TextView
+       android:text="@string/age"
+       android:textSize="11pt"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"/>
+		
 
+               <EditText
+               android:layout_height="wrap_content"
+               android:inputType="number"
+               android:id="@+id/et_age"
+               android:layout_width="110dp" android:gravity="right" />
+		
+		
+</TableRow>
 
    <Button 
   	android:id="@+id/calc_bmi" 
@@ -49,7 +65,7 @@
   	android:layout_width="160dp"></Button>
    
    <TextView
-       android:text="BMI wird hier angezeigt"
+       android:text="@string/result0"
        android:textSize="11pt"
        android:layout_width="fill_parent"
        android:layout_height="wrap_content"
