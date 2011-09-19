@@ -25,7 +25,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
 	protected EditText HeightLabel;
 	protected EditText WeightLabel;	
 	protected EditText AgeLabel;
-	protected RadioButton SexLabel;
+	protected RadioButton MaleLabel;
 	
 	
 	protected double[] avalues;
@@ -45,7 +45,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
         HeightLabel = (EditText) findViewById(R.id.et_height);
     	WeightLabel = (EditText) findViewById(R.id.et_weight);
     	AgeLabel = (EditText) findViewById(R.id.et_age);
-    //	SexLabel = (RadioButton) findViewById(R.id.et_sex);   
+    	MaleLabel = (RadioButton) findViewById(R.id.radio_male);   
         
         CalcLabel.setOnClickListener( this);
         
@@ -83,7 +83,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
         HeightLabel.setText("105");
         WeightLabel.setText("14.5");
         AgeLabel.setText("4.5");
-        Sex
+        MaleLabel.setChecked(true);
     }
         
     public void onClick(View v) {
