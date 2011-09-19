@@ -8,5 +8,7 @@
 	<string name="result1">The BMI is </string>
 	<string name="result2">kg/m².</string>
 	<string name="calc">Calculate</string>
-	
+	<string name="sex">Sex:</string>
+	<string name="male">Male</string>
+	<string name="female">Female</string>
 </resources>

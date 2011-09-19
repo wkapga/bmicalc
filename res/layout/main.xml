@@ -58,6 +58,36 @@
 		
 </TableRow>
 
+<TableRow>
+     <TextView
+       android:text="@string/sex"
+       android:textSize="11pt"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"/>
+
+ <RadioGroup
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <RadioButton android:id="@+id/radio_red"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/female" />
+      <RadioButton android:id="@+id/radio_blue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/male" />
+    </RadioGroup>
+
+		
+		
+		
+</TableRow>
+
+
+
+
    <Button 
   	android:id="@+id/calc_bmi" 
   	android:layout_height="wrap_content" 

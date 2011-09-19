@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 
@@ -24,6 +25,8 @@ public class BmicalcActivity extends Activity implements OnClickListener {
 	protected EditText HeightLabel;
 	protected EditText WeightLabel;	
 	protected EditText AgeLabel;
+	protected RadioButton SexLabel;
+	
 	
 	protected double[] avalues;
 	protected double[] lvalues;
@@ -42,7 +45,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
         HeightLabel = (EditText) findViewById(R.id.et_height);
     	WeightLabel = (EditText) findViewById(R.id.et_weight);
     	AgeLabel = (EditText) findViewById(R.id.et_age);
-            
+    //	SexLabel = (RadioButton) findViewById(R.id.et_sex);   
         
         CalcLabel.setOnClickListener( this);
         
@@ -72,17 +75,15 @@ public class BmicalcActivity extends Activity implements OnClickListener {
         }
         	
         
-       // NumberFormat formatter = new DecimalFormat(".00");
-       // String s2 =  formatter.format(lvalues[8]);
-        String s2 =  Double.toString(avalues[8])+Double.toString(pvalues[8])+Double.toString(lvalues[8])+Double.toString(svalues[8]);
-
+/*        String s2 =  Double.toString(avalues[8])+Double.toString(pvalues[8])+Double.toString(lvalues[8])+Double.toString(svalues[8]);
         ErgebnisLabel.setText(s2);
-        
+*/        
         
         
         HeightLabel.setText("105");
         WeightLabel.setText("14.5");
         AgeLabel.setText("4.5");
+        Sex
     }
         
     public void onClick(View v) {
@@ -106,7 +107,8 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                  
-            	ErgebnisLabel.setText(  getString(R.string.result1)  + s3 + getString(R.string.result2) );
+            	ErgebnisLabel.setText(  getString(R.string.result1) + 
+            			" " + s3 + " " + getString(R.string.result2) );
                  
             	}
      }
