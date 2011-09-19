@@ -15,7 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
+import org.apache.commons.math.MathException;
+import org.apache.commons.math.distribution.NormalDistribution;
+import org.apache.commons.math.distribution.NormalDistributionImpl;
 
 
 public class BmicalcActivity extends Activity implements OnClickListener {
@@ -93,7 +95,14 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                 
-                 String s4 = formatter.format(getperc(age, bmi, sex));
+                 String s4;
+				try {
+					s4 = formatter.format(getperc(age, bmi, sex));
+				} catch (MathException e) {
+					// TODO Auto-generated catch block
+					s4 = " na";
+					e.printStackTrace();
+				}
                  
             	ErgebnisLabel.setText(  getString(R.string.result1) + 
             			" " + s3 + " " + getString(R.string.result2) + 
@@ -102,11 +111,12 @@ public class BmicalcActivity extends Activity implements OnClickListener {
             	}
      }
       
-    public double getperc (double age, double bmi, boolean sex) {
+    public double getperc (double age, double bmi, boolean sex) throws MathException {
     
     String[] perc;
     Resources res = getResources();
     Double s;
+    Double p;
     
     if(sex = true) 
     	 {  perc = res.getStringArray(R.array.boys); }
@@ -137,13 +147,14 @@ public class BmicalcActivity extends Activity implements OnClickListener {
     
     s  = (  Math.pow( bmi / pvalues[i] , lvalues[i]) - 1 ) / (lvalues[i] * svalues[i]);
     
- // l,s,m
+ 
+    
     // Double sds = ((bmi/m)^l-1) / ( l *s)
     // perzentil = kum.stdnormvert(sds)
     
   //  double perc = cumulativeProbability(double -2,02);
-    
-    
-    return s;
+    p  = new org.apache.commons.math.distribution.NormalDistributionImpl(0, 1).cumulativeProbability(-99999, s);
+    p = p *100;
+    return p;
     }
 }
