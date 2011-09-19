@@ -4,8 +4,9 @@
     <string name="weight">Weight in kg:</string>
     <string name="height">Height in cm:</string>
 	<string name="age">Age in years:</string>
-	<string name="result0">BMI will be shoen here.</string>
+	<string name="result0">BMI will be shown here.</string>
 	<string name="result1">The BMI is </string>
 	<string name="result2">kg/m².</string>
+	<string name="calc">Calculate</string>
 	
 </resources>

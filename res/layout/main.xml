@@ -61,7 +61,7 @@
    <Button 
   	android:id="@+id/calc_bmi" 
   	android:layout_height="wrap_content" 
-  	android:text="Berechnen" 
+  	android:text="@string/calc" 
   	android:layout_width="160dp"></Button>
    
    <TextView

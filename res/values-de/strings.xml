@@ -7,5 +7,6 @@
 	<string name="result0">BMI wird hier angezeigt.</string>
 	<string name="result1">Der BMI beträgt</string>
 	<string name="result2">kg/m².</string>
+	<string name="calc">Berechnen</string>
 	
 </resources>
