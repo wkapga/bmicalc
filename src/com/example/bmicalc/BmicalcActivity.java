@@ -94,9 +94,13 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  String s2 = WeightLabel.getText().toString();
                  Double w = Double.parseDouble(s2);
 
+                 int i1 = 8;
+               //  Double m = (pvalues[i1]);
+                 
+                 
                  h = h/100;
                  
-                 Double bmi = w / ( h * h );
+                 Double bmi = w / ( h * h ) ;
 
                  // l,s,m
                  // Double sds = ((bmi/m)^l-1) / ( l *s)
@@ -104,11 +108,13 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  
                //  double perc = cumulativeProbability(double -2,02);
                  
+                 // bmi = bmi * m;
+                 
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                  
             	ErgebnisLabel.setText(  getString(R.string.result1) + 
-            			" " + s3 + " " + getString(R.string.result2) );
+            			" " + s3 + " " + getString(R.string.result2)  );
                  
             	}
      }
