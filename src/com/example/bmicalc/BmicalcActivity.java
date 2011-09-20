@@ -95,18 +95,20 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  NumberFormat formatter = new DecimalFormat(".00");
                  String s3 = formatter.format(bmi); 
                 
-                 String s4;
+                 String s4, s5;
 				try {
-					s4 = formatter.format(getperc(age, bmi, sex));
+					s4 =  formatter.format( getperc(age, bmi, sex));
 				} catch (MathException e) {
 					// TODO Auto-generated catch block
 					s4 = " na";
 					e.printStackTrace();
 				}
                  
+				if (sex == true) { s5 = "boys"; } else { s5 = "girls"; }
+				
             	ErgebnisLabel.setText(  getString(R.string.result1) + 
             			" " + s3 + " " + getString(R.string.result2) + 
-            			" sds=" + s4 );
+            			"\n" + s4 +" Percent of " + s5 + " have a higher BMI" );
                  
             	}
      }
@@ -118,7 +120,9 @@ public class BmicalcActivity extends Activity implements OnClickListener {
     Double s;
     Double p;
     
-    if(sex = true) 
+    
+    
+    if(sex == true) 
     	 {  perc = res.getStringArray(R.array.boys); }
     else
    	 {  perc = res.getStringArray(R.array.girls); }
@@ -143,7 +147,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
         
     }
     
-    int i=8;
+    int i= (int) Math.round(age * 2.  ) -1 ; // casting
     
     s  = (  Math.pow( bmi / pvalues[i] , lvalues[i]) - 1 ) / (lvalues[i] * svalues[i]);
     
@@ -153,7 +157,7 @@ public class BmicalcActivity extends Activity implements OnClickListener {
     // perzentil = kum.stdnormvert(sds)
     
   //  double perc = cumulativeProbability(double -2,02);
-    p  = new org.apache.commons.math.distribution.NormalDistributionImpl(0, 1).cumulativeProbability(-99999, s);
+    p  = new NormalDistributionImpl(0, 1).cumulativeProbability(s, 20);
     p = p *100;
     return p;
     }
