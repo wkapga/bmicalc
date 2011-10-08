@@ -7,8 +7,14 @@
 	<string name="result0">BMI will be shown here.</string>
 	<string name="result1">The BMI is </string>
 	<string name="result2">kg/m².</string>
+	<string name="result3"> Percent of</string>
+	<string name="result4"> of the same age have a higher BMI.</string>
 	<string name="calc">Calculate</string>
 	<string name="sex">Sex:</string>
 	<string name="male">Male</string>
 	<string name="female">Female</string>
+	<string name="boys">boys</string>
+	<string name="girls">girls</string>
+	
+	
 </resources>

@@ -96,19 +96,29 @@ public class BmicalcActivity extends Activity implements OnClickListener {
                  String s3 = formatter.format(bmi); 
                 
                  String s4, s5;
-				try {
-					s4 =  formatter.format( getperc(age, bmi, sex));
+				
+                 NumberFormat formatter2 = new DecimalFormat(".0");
+                 
+                 try {
+					s4 =  formatter2.format( getperc(age, bmi, sex));
 				} catch (MathException e) {
 					// TODO Auto-generated catch block
 					s4 = " na";
 					e.printStackTrace();
 				}
                  
-				if (sex == true) { s5 = "boys"; } else { s5 = "girls"; }
+				if (sex == true) 
+				{
+					s5 = getString(R.string.boys); 
+				} else {
+					s5 = getString(R.string.girls); 
+				}
 				
             	ErgebnisLabel.setText(  getString(R.string.result1) + 
             			" " + s3 + " " + getString(R.string.result2) + 
-            			"\n" + s4 +" Percent of " + s5 + " have a higher BMI" );
+            			"\n" +
+            			s4 + " " + getString(R.string.result3) + " " +
+            			s5  +" " + getString(R.string.result4) );
                  
             	}
      }
@@ -146,6 +156,8 @@ public class BmicalcActivity extends Activity implements OnClickListener {
     	pvalues[i] = Double.parseDouble( x[6].toString() ); 
         
     }
+    
+    age = Math.min(age, (double) 18.0 );
     
     int i= (int) Math.round(age * 2.  ) -1 ; // casting
     
