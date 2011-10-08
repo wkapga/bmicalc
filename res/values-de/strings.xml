@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Bmicalc</string>
+    <string name="app_name">Kinder-BMI</string>
     <string name="weight">Gewicht in kg:</string>
     <string name="height">Grösse in cm:</string>
 	<string name="age">Alter in Jahren:</string>

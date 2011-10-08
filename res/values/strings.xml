@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Bmicalc</string>
+    <string name="app_name">kidsbmicalc</string>
     <string name="weight">Weight in kg:</string>
     <string name="height">Height in cm:</string>
 	<string name="age">Age in years:</string>
 	<string name="result0">BMI will be shown here.</string>
 	<string name="result1">The BMI is </string>
 	<string name="result2">kg/m².</string>
-	<string name="result3"> Percent of</string>
+	<string name="result3"> percent of</string>
 	<string name="result4"> of the same age have a higher BMI.</string>
 	<string name="calc">Calculate</string>
 	<string name="sex">Sex:</string>
