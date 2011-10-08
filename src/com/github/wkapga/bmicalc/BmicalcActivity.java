@@ -19,7 +19,7 @@ This program is free software: you can redistribute it and/or modify
 
 */
 
-package com.example.bmicalc;
+package com.github.wkapga.bmicalc;
 
 
 // http://www.a-g-a.de/Leitlinies2.pdf
