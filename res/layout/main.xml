@@ -13,12 +13,11 @@
        android:layout_weight="1"/>
 
                <EditText
-               android:layout_height="wrap_content"
-               android:inputType="number"
-               android:id="@+id/et_height"
-               android:layout_width="110dp"
-               android:gravity="right" />
-
+                   android:id="@+id/et_height"
+                   android:layout_width="110dp"
+                   android:layout_height="wrap_content"
+                   android:gravity="right"
+                   android:inputType="numberDecimal" />
 
 </TableRow>
 
@@ -30,13 +29,12 @@
        android:layout_height="wrap_content"
        android:layout_weight="1"/>
 		
-
                <EditText
-               android:layout_height="wrap_content"
-               android:inputType="number"
-               android:id="@+id/et_weight"
-               android:layout_width="110dp" android:gravity="right" />
-		
+                   android:id="@+id/et_weight"
+                   android:layout_width="110dp"
+                   android:layout_height="wrap_content"
+                   android:gravity="right"
+                   android:inputType="numberDecimal" />
 		
 </TableRow>
 
@@ -48,13 +46,12 @@
        android:layout_height="wrap_content"
        android:layout_weight="1"/>
 		
-
                <EditText
-               android:layout_height="wrap_content"
-               android:inputType="number"
-               android:id="@+id/et_age"
-               android:layout_width="110dp" android:gravity="right" />
-		
+                   android:id="@+id/et_age"
+                   android:layout_width="110dp"
+                   android:layout_height="wrap_content"
+                   android:gravity="right"
+                   android:inputType="numberDecimal" />
 		
 </TableRow>
 
